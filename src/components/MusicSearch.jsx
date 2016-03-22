@@ -1,4 +1,5 @@
 const React = require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 const MusicListing = require('./MusicListing');
 
 const MusicSearch = React.createClass({
@@ -10,6 +11,7 @@ const MusicSearch = React.createClass({
   },
   search: function(e) {
     e.preventDefault();
+    this.setState({results: []});
     fetch(`/api/search?term=${this.state.searchTerm}`)
       .then(response => {
         response.json().then(data => {
@@ -37,7 +39,11 @@ const MusicSearch = React.createClass({
             </div>
           <input type="submit" className="btn btn-primary" />
         </form>
-        <div>{listings}</div>
+        <ReactCSSTransitionGroup transitionName="listing"
+                                 transitionEnterTimeout={500}
+                                 transitionLeaveTimeout={500}>
+          {listings}
+        </ReactCSSTransitionGroup>
       </div>
     );
   }
