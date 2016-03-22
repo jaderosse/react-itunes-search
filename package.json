@@ -1,5 +1,5 @@
 {
-  "name": "react-yearbook",
+  "name": "react-itunes-search",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WDI-SEA/react-yearbook.git"
+    "url": "git+https://github.com/WDI-SEA/react-itunes-search.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WDI-SEA/react-yearbook/issues"
+    "url": "https://github.com/WDI-SEA/react-itunes-search/issues"
   },
-  "homepage": "https://github.com/WDI-SEA/react-yearbook#readme",
+  "homepage": "https://github.com/WDI-SEA/react-itunes-search#readme",
   "devDependencies": {
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
