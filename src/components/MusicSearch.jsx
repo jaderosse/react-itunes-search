@@ -20,8 +20,8 @@ const MusicSearch = React.createClass({
       });
   },
   render: function() {
-    const listings = this.state.results.map((listing, idx) => {
-      return <MusicListing key={idx} listing={listing} />
+    const listings = this.state.results.map(listing => {
+      return <MusicListing key={listing.trackId} listing={listing} />
     });
 
     return (
