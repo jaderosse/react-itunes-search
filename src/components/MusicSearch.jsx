@@ -37,7 +37,11 @@ const MusicSearch = React.createClass({
             </div>
           <input type="submit" className="btn btn-primary" />
         </form>
-        <div>{listings}</div>
+        <ReactCSSTransitionGroup transitionName="listing" 
+                                 transitionEnterTimeout={500} 
+                                 transitionLeaveTimeout={500}>
+          {listings}
+        </ReactCSSTransitionGroup>
       </div>
     );
   }
